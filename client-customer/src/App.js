@@ -4,7 +4,7 @@ import './App.css'
 import { BrowserRouter } from 'react-router-dom';
 import Main from './components/MainComponent';
 import MyProvider from './contexts/MyProvider';
-axios.defaults.baseURL= "http://localhost:3000"
+axios.defaults.baseURL= "https://mern-stack-project-1z4i.onrender.com"
 
 class App extends Component {
   constructor(props) {
