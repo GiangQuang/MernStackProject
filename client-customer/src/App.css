@@ -1,0 +1,374 @@
+/* styles.css */
+.dark-mode body {
+  background-color: #3d3d3d;
+  color: rgb(209 213 219);
+  transition: all 0.3s linear;
+}
+body {
+  transition: all 0.3s linear;
+  background-color: rgb(209 213 219);
+}
+.dark-mode .dark-mode-text-field {
+  background-color: #1a1a1a;
+  color: #fff;
+  transition: all 0.3s linear;
+}
+.body-customer {
+  width: 1150px;
+  height: fit-content;
+  margin: 0 auto;
+}
+.body-admin {
+  width: fit-content;
+  height: fit-content;
+  margin: 0px auto;
+}
+
+div.inline {
+  display: inline-block;
+  
+}
+figure.caption-right {
+  display: flex;
+  align-items: center;
+}
+
+.align-valign-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 0px 20px 20px 20px;
+  border: 1px solid black;
+}
+span.link {
+  cursor: pointer;
+  color: blue;
+  text-decoration: underline;
+}
+/* menu.css */
+div.border-bottom {
+  border-bottom: 1px solid black;
+  padding: 10px 0px 10px 0px;
+}
+div.float-left {
+  float: left;
+}
+div.float-right {
+  float: right;
+  display: flex;
+  gap: 0.5rem;
+}
+div.float-clear {
+  clear: both;
+}
+ul.menu {
+  margin: 0px;
+  padding: 0;
+}
+li.menu {
+  display: inline;
+  margin-right: 20px;
+  text-transform: uppercase;
+}
+form.search {
+  margin: 0px;
+}
+input.keyword {
+  width: 110px;
+}
+/* datatable.css */
+.datatable {
+  text-align: center;
+  border-collapse: collapse;
+}
+/* header */
+tr:first-child.datatable {
+  background-color: #ffcc00;
+}
+/* even rows, except header */
+tr:not(:first-child):nth-child(even).datatable {
+  background-color: #f5f5f5;
+}
+/* odd rows, except header */
+tr:not(:first-child):nth-child(odd).datatable {
+  background-color: #ffeeaa;
+}
+/* except header */
+tr:not(:first-child):hover.datatable {
+  background-color: #dcfcfc;
+  cursor: pointer;
+}
+
+/*
+=============== 
+Variables
+===============
+*/
+:root {
+  /* grey used for paragraphs */
+  --clr-grey-5: hsl(210, 22%, 49%);
+  --clr-grey-6: hsl(209, 23%, 60%);
+  --clr-grey-7: hsl(211, 27%, 70%);
+  --clr-grey-8: hsl(210, 31%, 80%);
+  --clr-grey-9: hsl(212, 33%, 89%);
+  --clr-grey-10: hsl(210, 36%, 96%);
+  --clr-gold: #c59d5f;
+  --clr-black: #222;
+  --ff-primary: "Roboto", sans-serif;
+  --ff-secondary: "Open Sans", sans-serif;
+  --transition: all 0.3s linear;
+  --spacing: 0.25rem;
+  --radius: 0.5rem;
+}
+/*
+=============== 
+Global Styles
+===============
+*/
+h1,
+h2,
+h3,
+h4 {
+  letter-spacing: var(--spacing);
+  text-transform: capitalize;
+  line-height: 1.25;
+  margin-bottom: 0.75rem;
+  font-family: var(--ff-primary);
+}
+h1 {
+  font-size: 3rem;
+}
+h2 {
+  font-size: 2rem;
+}
+h3 {
+  font-size: 1.25rem;
+}
+h4 {
+  font-size: 0.875rem;
+}
+p {
+  margin-bottom: 1.25rem;
+  color: var(--clr-grey-5);
+}
+@media screen and (min-width: 800px) {
+  h1 {
+    font-size: 4rem;
+  }
+  h2 {
+    font-size: 2.5rem;
+  }
+  h3 {
+    font-size: 1.75rem;
+  }
+  h4 {
+    font-size: 1rem;
+  }
+  body {
+    font-size: 1rem;
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    line-height: 1;
+  }
+}
+
+/*
+=============== 
+Menu
+===============
+*/
+.title {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.underline {
+  width: 5rem;
+  height: 0.25rem;
+  background: var(--clr-gold);
+  margin-left: auto;
+  margin-right: auto;
+}
+.btn-container {
+  margin-bottom: 4rem;
+  display: flex;
+  justify-content: center;
+}
+.filter-btn ,.custom-link{
+  border: #c59d5f 2px solid;
+  background: transparent;
+  border-color: var(--clr-gold);
+  font-size: 1rem;
+  text-transform: capitalize;
+  margin: 0 0.5rem;
+  letter-spacing: 1px;
+  border-radius: var(--radius);
+  padding: 0.375rem 0.75rem;
+  color: var(--clr-gold);
+  cursor: pointer;
+  transition: var(--transition);
+  text-decoration: none;
+}
+.filter-btn:hover ,.custom-link:hover{
+  background: var(--clr-gold);
+  color: var(--clr-white);
+}
+.section-center {
+  width: 90vw;
+  margin: 0 auto;
+  max-width: 1170px;
+  display: grid;
+  gap: 3rem 2rem;
+  justify-items: center;
+}
+.menu-item {
+  display: grid;
+  gap: 1rem 2rem;
+  max-width: 25rem;
+}
+.dark-mode-button {
+  border-radius: var(--radius);
+  padding: 10px;
+  width: 40px;
+}
+.cart-icon {
+  position: relative;
+}
+
+.cart-badge {
+  position: absolute;
+  top: -6px;
+  right: -8px;
+  background-color: #f87171;
+  color: #fff;
+  border-radius: 9999px;
+  padding: 4px 6px;
+  font-size: 12px;
+  font-weight: bold;
+}
+.search-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: width 0.3s;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.search-input {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  outline: none;
+  font-size: 16px;
+}
+
+
+.search-button {
+  background-color: #f1f1f1;
+  border: none;
+  padding: 12px;
+  cursor: pointer;
+}
+
+.search-button svg {
+  width: 20px;
+  height: 20px;
+  stroke: #555;
+}
+
+.photo {
+  object-fit: cover;
+  height: 200px;
+  border: 0.25rem solid var(--clr-gold);
+  border-radius: var(--radius);
+}
+.item-info {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 0.5px dotted var(--clr-grey-5);
+  margin-bottom: 0.5rem;
+}
+.item-info h4 {
+  margin-bottom: 0.5rem;
+}
+.price {
+  color: var(--clr-gold);
+}
+.item-text {
+  margin-bottom: 0;
+  padding-top: 1rem;
+}
+
+@media screen and (min-width: 768px) {
+  .menu-item {
+    grid-template-columns: 225px 1fr;
+    gap: 0 1.25rem;
+    max-width: 40rem;
+  }
+  .photo {
+    height: 175px;
+  }
+  
+}
+@media screen and (min-width: 1200px) {
+  .section-center {
+    width: 95vw;
+    grid-template-columns: 1fr 1fr;
+  }
+  .photo {
+    height: 150px;
+  }
+
+}
+/* Responsive styles for screen sizes up to 768px */
+@media (max-width: 768px) {
+  .body-customer {
+    width: 100%;
+    padding: 20px; /* Optional: Add padding to the sides if needed */
+  }
+  .photo {
+    height: 100px;
+  }
+  .filter-btn {
+    font-size: 0.75rem;
+  }
+}
+
+/* Additional responsive styles for screen sizes between 769px and 1024px */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .body-customer {
+    width: 90%;
+    padding: 20px; /* Optional: Add padding to the sides if needed */
+  }
+  .photo {
+    height: 100px;
+  }
+  .filter-btn {
+    font-size: 0.75rem;
+  }
+}
+
+/* Additional responsive styles for screen sizes above 1024px */
+@media (min-width: 1025px) {
+  .body-customer {
+    width: 1150px;
+    padding: 20px; /* Optional: Add padding to the sides if needed */
+  }
+  .search-container.expanded {
+    width: 25rem; 
+  }
+  .search-input.expanded {
+    width: 25rem;
+  }
+}
